@@ -15,4 +15,5 @@ abstract public class BankAccount {
     public BankAccount(String lastName, boolean accountStatus){
         this("", lastName, accountStatus);
     }
+    abstract void withdraw();
 }
