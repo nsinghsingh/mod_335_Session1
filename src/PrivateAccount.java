@@ -8,7 +8,12 @@ public class PrivateAccount extends BankAccount{
     }
 
     @Override
-    void withdraw() {
-
+    void withdraw(int amount) {
+        if(accountStatus - amount < -2000){
+            throw new OutOfMoneyException("Your account balance can't go under -2000");
+        }
+        else{
+            accountStatus -= amount;
+        }
     }
 }
